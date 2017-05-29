@@ -1,5 +1,19 @@
+<h1> Categories</h1>
+<p><a href="<%= new_category_path %>">Add New Category</a></p>
+
 <% @categories.each do |category| %>
   <div class="category_wrapper">
-    <h2 class="name"><%= link_to category.name, category %></h2>
+    <ul>
+      <li><h2 class="name"><%= link_to category.name, category %></h2>
+      <ul class="category_options">
+        <li><%= link_to "Edit", edit_category_path(category)%></li>
+        <li><%= link_to "Delete", category_path(category),
+                         method: :delete,
+                         data: { confirm: 'FO SHO? '} %></li>
+      </ul>
+    </ul>
   </div>
 <% end %>
+
+
+
