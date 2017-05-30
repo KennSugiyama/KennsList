@@ -27,9 +27,6 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-    p "***********************"
-
-    p (params[:category].permit(:name, :description))
 
     if @category.update(params[:category].permit(:name, :description))
       redirect_to root_path #@category

@@ -1,0 +1,26 @@
+
+  <h1><%= @category.name %></h1>
+
+  <% @articles.each do |article| %>
+    <div class="ArticlesInCategory">
+      <ul>
+        <li>
+          <h2 class="article_title">
+            <%= link_to article.title + " ($"+ article.asking_price.to_s + ")",
+              article_path(article)%>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+
+
+
+
+

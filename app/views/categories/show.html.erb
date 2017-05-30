@@ -1,5 +1,10 @@
 <div id="category_content">
-  <h1 class="title"><%= @category.name.upcase %> DESCRIPTION</h1>
+  <h1 class="title"><%= @category.name.upcase %></h1>
+  <h2>DESCRIPTION</h2>
 
   <p class="description"><%= @category.description %></p>
+
+  <!-- LIST ARTICLE PARTIAL VIEW HERE-->
 </div>
+
+<%= render 'articles/index' %>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root "categories#index"
+  resources :articles
 
-  resources :categories, :posts
+  resources :categories do
+    resources :articles
+  end
 
-
-  # get '/new', to: 'categories#new'
 end
