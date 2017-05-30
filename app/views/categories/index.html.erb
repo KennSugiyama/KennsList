@@ -4,7 +4,7 @@
 <% @categories.each do |category| %>
   <div class="category_wrapper">
     <ul>
-      <li><h2 class="name"><%= link_to category.name, articles_path %></h2>
+      <li><h2 class="name"><%= link_to category.name, category_articles_path(category) %></h2>
       <ul class="category_options">
         <li><%= link_to "Edit", edit_category_path(category)%></li>
         <li><%= link_to "Delete", category_path(category),

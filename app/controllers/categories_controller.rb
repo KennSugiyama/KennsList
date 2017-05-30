@@ -18,7 +18,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find(params[:category_id])
+    @articles = @category.articles
   end
 
   def edit
@@ -28,7 +29,7 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
 
-    if @category.update(params[:category].permit(:name, :description))
+    if @category.update(category_params)#(params[:category].permit(:name, :description))
       redirect_to root_path #@category
     else
       render 'edit'

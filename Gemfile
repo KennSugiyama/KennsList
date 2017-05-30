@@ -7,6 +7,12 @@ end
 
 
 
+# figaro
+# factorygirl
+# ** shoulda - validation and associations
+# Controller/feature/migration-association tests
+# unit testing.
+
 gem 'awesome_print'
 gem 'bootstrap-sass', '3.3.6'
 gem 'rails', '~> 5.1.1'
